@@ -23,6 +23,7 @@
     background: url(images/bg.jpg) no-repeat center;
     border-radius:5px;
     transition:box-shadow 1s;
+    overflow:hidden;
 
 
 
@@ -31,8 +32,13 @@
 }
 .card-wrapper:hover{
     box-shadow: 0 0 30px floralwhite;
+    
 }
+
+
 .card {
+    position:absolute;
+    top:-100%;
     height:100%;
     width:100%;
     background:linear-gradient(190deg,rgba(21,190,33,0.8)50%, rgba(190,31,43,0.7)0);
@@ -41,7 +47,13 @@
     flex-direction: column;
     align-items:center;
     justify-content:space-between;
+    transition:top .3s 1.5s;
 
+
+}
+.card-wrapper:hover .card{
+    top:0;
+     
 
 }
 .card-img{
@@ -54,9 +66,59 @@
     padding:10px;
     box-shadow:0 0 50px rgba(0,0,0,0.5);
 
+}
+.card-heading{
+    font-family:'Source Code Pro';
+    font-size:25px;
+    font-weight:300;
+    text-transform:uppercase;
+    background:linear-gradient(rgba(21,190,32,0.8),rgba(6, 129, 12, 0.7));
+
 
 }
+.card-paragraph{
+    font-size:18px;
+    color: white;
+    width:85%;
+    text-align:justify;
+}
+.card-icons{
+    list-style:none;
+    display:flex;
+    width:50%;
+    justify-content:space-around;
+}
+.card-icon-link{
+    text-decoration:none;
+    width:35px;
+    height:35px;
+    border:1px solid white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.card-icon-link:hover,card-icon{
+    border:1px solid blueviolet;
+}
+.card-icon{
+    font-size:20px;
+    color:white;
+    transition:color .3s;
 
+
+}
+.card-btn{
+    border:none;
+    outline:none;
+    width:150px;
+    height:35px;
+    margin-bottom:20px;
+    border-radius:50px;
+    background-color: blue;
+    box-shadow:0 10px 20px black;
+     
+
+}
 
 
 
